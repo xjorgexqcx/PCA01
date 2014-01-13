@@ -9,11 +9,6 @@
 
 
 	$(document).ready(function() {
-		
-		$('#n1').validarCampo('0123456789');
-		$('#n2').validarCampo('0123456789');
-		
-
 		//metodo para registrarse como usuario normal 
 		$(".operacion").click(function(e) {
 			e.preventDefault();
