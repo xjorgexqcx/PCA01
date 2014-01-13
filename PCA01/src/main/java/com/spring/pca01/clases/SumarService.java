@@ -19,6 +19,8 @@ public class SumarService {
 			} else {
 				rpta = "El primer numero debe ser mayor al segundo";
 			}
+		} else if (operacion.equals("multiplicar")) {
+			rpta = "Resultado " + (a * b);
 		}
 		return rpta;
 	}
