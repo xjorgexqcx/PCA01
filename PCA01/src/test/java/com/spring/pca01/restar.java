@@ -30,8 +30,9 @@ public class restar {
 	
 	@Test
 	public void test() {
+		if(a<b){
 		logger.info("Resultado:"+ (a-b));
-		
+		}
 	}
 
 }
