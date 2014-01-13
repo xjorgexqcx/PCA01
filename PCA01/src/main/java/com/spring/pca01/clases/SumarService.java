@@ -21,6 +21,14 @@ public class SumarService {
 			}
 		} else if (operacion.equals("multiplicar")) {
 			rpta = "Resultado " + (a * b);
+		} else if (operacion.equals("dividir")) {
+			if (b > 0) {
+				rpta = "Resultado: " + (a / b);
+			} else {
+				rpta = "La division entre 0 no es valida";
+			}
+		} else {
+			rpta = "Debe seleccionar una operacion valida";
 		}
 		return rpta;
 	}
