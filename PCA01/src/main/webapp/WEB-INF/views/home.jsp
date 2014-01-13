@@ -42,8 +42,8 @@
 		<form action="#" id="form">
 	<table align="center">
 		<tr>
-			<td>N1<input type="text"> 
-			N2<input type="text"> </td>
+			<td>N1<input type="text" id="n1"> 
+			N2<input type="text" id="n2"> </td>
 		</tr>
 		<tr>
 		<td><input type="button" id="sumar" class="operacion"> Sumar
