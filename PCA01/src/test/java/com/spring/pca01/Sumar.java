@@ -18,16 +18,24 @@ public class Sumar {
 			.getLogger(HomeController.class);
 
 	int a, b;
+	String operacion;
 
 	@Before
 	public void setUp() throws Exception {
-		a = 6;
+		a = -6;
 		b = 8;
+		operacion = "sumar";
 	}
 
 	@Test
 	public void test() {
-		logger.info("" + (a + b));
+		if (operacion.equals("sumar")) {
+			if (a > 0 && b > 0) {
+				logger.info("" + (a + b));
+			} else {
+				logger.info("Usted necesita ingresar valores positivos");
+			}
+		}
 	}
 
 }
