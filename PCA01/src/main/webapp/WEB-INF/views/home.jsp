@@ -16,7 +16,7 @@
 				
 				url : "${pageContext.request.contextPath}/operaciones",
 				type : "POST",
-				data : "a="+$("#n1").val("")+"&b="+$("#n2").val()+"&operacion="+$(this).attr("id"),
+				data : "a="+$("#n1").val()+"&b="+$("#n2").val()+"&operacion="+$(this).attr("id"),
 				success : function(result) {
 					$("#resultado").val(result);					
 
