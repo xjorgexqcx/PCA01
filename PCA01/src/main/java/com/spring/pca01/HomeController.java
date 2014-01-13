@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.pca01.clases.SumarService;
+
 /**
  * Handles requests for the application home page.
  */
@@ -43,6 +45,8 @@ public class HomeController {
 	public String home(@RequestParam("a") Integer a,
 			@RequestParam("b") Integer b,
 			@RequestParam("operacion") String operacion) {
-
+		SumarService su = new SumarService();
+		String rpta = su.Operacion(operacion, a, b);
+		return rpta;
 	}
 }
