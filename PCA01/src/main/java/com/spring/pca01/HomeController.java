@@ -59,8 +59,7 @@ public class HomeController {
 		logger.info("Tiempo de inicio" + time_start);
 		logger.info("Tiempo de termino" + time_end);
 		String rpta = su.Operacion(operacion, a, b);
-		DecimalFormat newFormat = new DecimalFormat("#.##");
-		return newFormat.format(rpta);
+		return rpta;
 	}
 	
 }
