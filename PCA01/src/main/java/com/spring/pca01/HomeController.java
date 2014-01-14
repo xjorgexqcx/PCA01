@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +22,12 @@ import com.spring.pca01.clases.SumarService;
 @Controller
 public class HomeController {
 
+	long time_start, time_end;
 	private static final Logger logger = LoggerFactory
 			.getLogger(HomeController.class);
+
+	@Autowired
+	private SumarService sumarService;
 
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -45,7 +50,13 @@ public class HomeController {
 	public String home(@RequestParam("a") Integer a,
 			@RequestParam("b") Integer b,
 			@RequestParam("operacion") String operacion) {
+		time_start = System.currentTimeMillis();
 		SumarService su = new SumarService();
+		time_end = System.currentTimeMillis();
+		logger.info("Tiempo transcurrido: " + (time_end - time_start)
+				+ " milisegundos");
+		logger.info("Tiempo de inicio" + time_start);
+		logger.info("Tiempo de termino" + time_end);
 		String rpta = su.Operacion(operacion, a, b);
 		return rpta;
 	}
