@@ -1,6 +1,7 @@
 package com.spring.pca01;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -58,6 +59,8 @@ public class HomeController {
 		logger.info("Tiempo de inicio" + time_start);
 		logger.info("Tiempo de termino" + time_end);
 		String rpta = su.Operacion(operacion, a, b);
-		return rpta;
+		DecimalFormat newFormat = new DecimalFormat("#.##");
+		return newFormat.format(rpta);
 	}
+	
 }

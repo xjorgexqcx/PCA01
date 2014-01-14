@@ -4,16 +4,18 @@
 <head>
 	<title>Home</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="${pageContext.request.contextPath}/js/validarCampo.js"></script>
 </head>
 <script type="text/javascript">
 
+$('#n1').validarCampo('0123456789');
+$('#n2').validarCampo('0123456789');
 
 	$(document).ready(function() {
 		//metodo para registrarse como usuario normal 
 		$(".operacion").click(function(e) {
 			e.preventDefault();
-			$.ajax({			
-				
+			$.ajax({				
 				url : "${pageContext.request.contextPath}/operaciones",
 				type : "POST",
 				data : "a="+$("#n1").val()+"&b="+$("#n2").val()+"&operacion="+$(this).attr("id"),
@@ -48,7 +50,7 @@
 		<input type="button" id="dividir" class="operacion"> Dividir</td>
 		</tr>
 		<tr>
-		<td>Resultado:<input id="resultado" type="text" readonly="readonly" > </td>
+		<td><div id="resultado"> </div> </td>
 		</tr>
 		
 		
