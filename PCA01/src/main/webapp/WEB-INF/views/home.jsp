@@ -45,10 +45,10 @@
 			N2<input type="text" id="n2"> </td>
 		</tr>
 		<tr>
-		<td><input type="button" id="sumar" class="operacion"> Sumar
-		<input type="button" id="restar" class="operacion"> Restar
-		<input type="button" id="multiplicar" class="operacion"> Multiplicar
-		<input type="button" id="dividir" class="operacion"> Dividir</td>
+		<td><input type="button" value="sumar" id="sumar" class="operacion">
+		<input type="button" value="Restar" id="restar" class="operacion"> 
+		<input type="button" value="Multiplicar" id="multiplicar" class="operacion"> 
+		<input type="button" value="Dividir" id="dividir" class="operacion"></td>
 		</tr>
 		<tr>
 		<td><div id="resultado" > </div></td>

@@ -51,13 +51,12 @@ public class HomeController {
 			@RequestParam("operacion") String operacion) {
 		time_start = System.currentTimeMillis();
 		SumarService su = new SumarService();
-		time_end = System.currentTimeMillis();
-		logger.info("Tiempo transcurrido: " + (time_end - time_start)
-				+ " milisegundos");
+		String rpta;
+		rpta = su.Operacion(operacion, a, b);
+		float ta = time_end - time_start;
+		logger.info("Tiempo transcurrido: " + ta + " milisegundos");
 		logger.info("Tiempo de inicio" + time_start);
 		logger.info("Tiempo de termino" + time_end);
-		String rpta = su.Operacion(operacion, a, b);
 		return rpta;
 	}
-
 }
