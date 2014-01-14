@@ -4,14 +4,15 @@
 <head>
 	<title>Home</title>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="${pageContext.request.contextPath}/js/validarCampo.js"></script>
+	<script src="js/validarCampo.js"></script>
 </head>
 <script type="text/javascript">
 
-$('#n1').validarCampo('0123456789');
-$('#n2').validarCampo('0123456789');
+
 
 	$(document).ready(function() {
+		$('#n1').validarCampo('0123456789');
+		$('#n2').validarCampo('0123456789');
 		//metodo para registrarse como usuario normal 
 		$(".operacion").click(function(e) {
 			e.preventDefault();
@@ -50,7 +51,7 @@ $('#n2').validarCampo('0123456789');
 		<input type="button" id="dividir" class="operacion"> Dividir</td>
 		</tr>
 		<tr>
-		<td><div id="resultado"> </div> </td>
+		<td><div id="resultado"> </div></td>
 		</tr>
 		
 		
