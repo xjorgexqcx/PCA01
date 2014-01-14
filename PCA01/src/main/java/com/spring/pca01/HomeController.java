@@ -1,7 +1,6 @@
 package com.spring.pca01;
 
 import java.text.DateFormat;
-import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -48,8 +47,7 @@ public class HomeController {
 	@RequestMapping(value = "operaciones", method = { RequestMethod.GET,
 			RequestMethod.POST })
 	@ResponseBody
-	public String home(@RequestParam("a") Integer a,
-			@RequestParam("b") Integer b,
+	public String home(@RequestParam("a") Float a, @RequestParam("b") Float b,
 			@RequestParam("operacion") String operacion) {
 		time_start = System.currentTimeMillis();
 		SumarService su = new SumarService();
@@ -61,5 +59,5 @@ public class HomeController {
 		String rpta = su.Operacion(operacion, a, b);
 		return rpta;
 	}
-	
+
 }

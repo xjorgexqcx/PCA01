@@ -30,7 +30,8 @@ public class Dividir {
 	public void test() {
 		if (operacion.equals("dividir")) {
 			if (b > 0) {
-				logger.info("Resultado: " + (a / b));
+				long div = a / b;
+				logger.info("Resultado: " + div);
 			} else {
 				logger.info("La division entre 0 no es valida");
 			}

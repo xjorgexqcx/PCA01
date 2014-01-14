@@ -21,8 +21,8 @@
 				type : "POST",
 				data : "a="+$("#n1").val()+"&b="+$("#n2").val()+"&operacion="+$(this).attr("id"),
 				success : function(result) {
-					$("#resultado").val(result);					
-
+					$("#resultado").html(result);		
+					console.log("Resultado:"+result);
 				}, error : function(a, b, c) {
 					console.log("Ocurrio un error " + a.status + " " + b);
 				}
@@ -51,10 +51,8 @@
 		<input type="button" id="dividir" class="operacion"> Dividir</td>
 		</tr>
 		<tr>
-		<td><div id="resultado"> </div></td>
-		</tr>
-		
-		
+		<td><div id="resultado" > </div></td>
+		</tr>		
 	</table>
 	</form>
 </body>

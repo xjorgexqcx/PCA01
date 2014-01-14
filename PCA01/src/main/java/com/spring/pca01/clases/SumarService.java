@@ -7,28 +7,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class SumarService {
 
-	public String Operacion(String operacion, int a, int b) {
-		
+	public String Operacion(String operacion, float a, float b) {
+
 		DecimalFormat newFormat = new DecimalFormat("#.##");
-		
+
 		String rpta = "";
+		double rptadecimal;
 		if (operacion.equals("sumar")) {
 			if (a > 0 && b > 0) {
-				rpta = "Resultado: " + newFormat.format((a + b));
+				rptadecimal = Float.parseFloat(newFormat.format(a + b));
+				rpta = "Resultado: " + rptadecimal;
 			} else {
 				rpta = "Usted necesita ingresar valores positivos";
 			}
 		} else if (operacion.equals("restar")) {
-			if (a > b) {
-				rpta = "Resultado: " + newFormat.format((a - b));
+			if (a >= b) {
+				rptadecimal = Float.parseFloat(newFormat.format(a - b));
+				rpta = "Resultado: " + rptadecimal;
 			} else {
 				rpta = "El primer numero debe ser mayor al segundo";
 			}
 		} else if (operacion.equals("multiplicar")) {
-			rpta = "Resultado " + newFormat.format((a * b));
+			rptadecimal = Double.parseDouble(newFormat.format(a * b));
+			rpta = "Resultado: " + rptadecimal;
 		} else if (operacion.equals("dividir")) {
 			if (b > 0) {
-				rpta = ""+newFormat.format((a / b));
+
+				rpta = "Resultado: " + newFormat.format(a / b);
 			} else {
 				rpta = "La division entre 0 no es valida";
 			}
